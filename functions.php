@@ -143,6 +143,15 @@ add_action( 'widgets_init', 'modal_widgets_init' );
  * Enqueue scripts and styles.
  */
 function modal_scripts() {
+
+/**
+ * Enqueue Google Fonts
+ */
+	wp_enqueue_style( 'google-fonts', get_stylesheet_uri( 'https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Sarabun:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,5001,700;&display=swap' ) );
+
+/**
+ * Enqueue Modal stylesheet
+ */	
 	wp_enqueue_style( 'modal-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'modal-style', 'rtl', 'replace' );
 
