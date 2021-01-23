@@ -20,3 +20,13 @@
     left: 5%;
     opacity: 1;
 }
+
+@mixin box-shadow {
+    -webkit-box-shadow: 5px 6px -6px $color__shadow;
+	-moz-box-shadow: 5px 6px -6px $color__shadow;
+	box-shadow: 5px 6px -6px $color__shadow;
+}
+
+@mixin text-shadow {
+    text-shadow: 1px 3px $color__text-shadow;
+}
