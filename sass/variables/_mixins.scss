@@ -1,0 +1,22 @@
+/*
+ * Link hover underline effect
+ */
+@mixin link-hover-style {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 45%;
+    content: '';
+    height: 0.1em;
+    width: 0;
+    border-radius: 50%;
+    background-color: $color__link-hover;
+    opacity: 0.5;
+    transition: width 0.5s ease 0s, left 0.5s ease 0s;
+}
+
+@mixin link-hover-style-animation {
+    width: 90%;
+    left: 5%;
+    opacity: 1;
+}
