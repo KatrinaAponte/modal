@@ -1,0 +1,37 @@
+// styleint-disable value-keyword-case
+$font__main: Prompt, sans-serif;
+$font__headings: Sarabun, Helvetica, sans-serif;
+
+// styleint-ebable value-keyword-case
+$font__code: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", courier, monospace;
+
+/*
+ * Line heights
+ */
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+$font__line-height-nav: 1;
+
+/*
+ * Font weight defaults
+ */
+$font__light: 300;
+$font__regular: 400;
+$font__bold: 500;
+$font__black: 700;
+
+/*
+ * Font base sizes
+ */
+$font__size__base-mob: 14px;
+$font__size__base-desk: 16px;
+
+/*
+ * Font size defaults
+ */
+$font__size__s: .75rem;
+$font__size__m: 1rem;
+$font__size__l: 1.5rem;
+$font__size__xl: 2rem;
+$font__size__header: calc( 1.5rem + 1vmin );
