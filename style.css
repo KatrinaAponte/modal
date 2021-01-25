@@ -424,6 +424,14 @@ body {
   background: #fff;
 }
 
+hr {
+  background-color: #49743a;
+  border-radius: 25% 10% 25% 10% / 10% 25% 10% 25%;
+  height: .25em;
+  width: 90%;
+  margin-bottom: 1.5rem;
+}
+
 /* Links
 --------------------------------------------- */
 /* Forms
