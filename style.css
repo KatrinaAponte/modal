@@ -82,6 +82,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
+/*
+ * Link hover underline effect
+ */
 /* Normalize
 --------------------------------------------- */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -434,6 +437,148 @@ hr {
 
 /* Links
 --------------------------------------------- */
+.site-main a,
+.widget-area a,
+.site-footer a {
+  text-decoration: none;
+  color: #a6534f;
+  position: relative;
+  padding-bottom: 0.2em;
+}
+
+.site-main a:after,
+.widget-area a:after,
+.site-footer a:after {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 45%;
+  content: '';
+  height: 0.1em;
+  width: 0;
+  border-radius: 50%;
+  background-color: #a6534f;
+  opacity: 0.5;
+  -webkit-transition: width 0.5s ease 0s, left 0.5s ease 0s;
+  transition: width 0.5s ease 0s, left 0.5s ease 0s;
+}
+
+.site-main a:visited,
+.widget-area a:visited,
+.site-footer a:visited {
+  color: #a56868;
+}
+
+.site-main a:hover, .site-main a:focus, .site-main a:active,
+.widget-area a:hover,
+.widget-area a:focus,
+.widget-area a:active,
+.site-footer a:hover,
+.site-footer a:focus,
+.site-footer a:active {
+  color: #a6534f;
+}
+
+.site-main a:hover:after, .site-main a:focus:after, .site-main a:active:after,
+.widget-area a:hover:after,
+.widget-area a:focus:after,
+.widget-area a:active:after,
+.site-footer a:hover:after,
+.site-footer a:focus:after,
+.site-footer a:active:after {
+  width: 90%;
+  left: 5%;
+  opacity: 1;
+}
+
+.site-main a:focus,
+.widget-area a:focus,
+.site-footer a:focus {
+  outline: thin dotted;
+}
+
+.site-main a:hover, .site-main a:active,
+.widget-area a:hover,
+.widget-area a:active,
+.site-footer a:hover,
+.site-footer a:active {
+  outline: 0;
+}
+
+.site-main h1 a,
+.site-main h2 a,
+.site-main h3 a,
+.site-main h4 a,
+.site-main h5 a,
+.site-main h6 a {
+  color: #49743a;
+}
+
+.site-main h1 a:visited,
+.site-main h2 a:visited,
+.site-main h3 a:visited,
+.site-main h4 a:visited,
+.site-main h5 a:visited,
+.site-main h6 a:visited {
+  color: #49743a;
+}
+
+.site-main h1 a:after,
+.site-main h2 a:after,
+.site-main h3 a:after,
+.site-main h4 a:after,
+.site-main h5 a:after,
+.site-main h6 a:after {
+  display: none;
+}
+
+.site-main h1 a:hover, .site-main h1 a:focus, .site-main h1 a:active,
+.site-main h2 a:hover,
+.site-main h2 a:focus,
+.site-main h2 a:active,
+.site-main h3 a:hover,
+.site-main h3 a:focus,
+.site-main h3 a:active,
+.site-main h4 a:hover,
+.site-main h4 a:focus,
+.site-main h4 a:active,
+.site-main h5 a:hover,
+.site-main h5 a:focus,
+.site-main h5 a:active,
+.site-main h6 a:hover,
+.site-main h6 a:focus,
+.site-main h6 a:active {
+  color: #61964d;
+}
+
+.site-main h1 a:hover:after, .site-main h1 a:focus:after, .site-main h1 a:active:after,
+.site-main h2 a:hover:after,
+.site-main h2 a:focus:after,
+.site-main h2 a:active:after,
+.site-main h3 a:hover:after,
+.site-main h3 a:focus:after,
+.site-main h3 a:active:after,
+.site-main h4 a:hover:after,
+.site-main h4 a:focus:after,
+.site-main h4 a:active:after,
+.site-main h5 a:hover:after,
+.site-main h5 a:focus:after,
+.site-main h5 a:active:after,
+.site-main h6 a:hover:after,
+.site-main h6 a:focus:after,
+.site-main h6 a:active:after {
+  display: none;
+}
+
+.custom-logo-link:after,
+.post-thumbnail:after {
+  display: none;
+}
+
+#wpadminbar a:after {
+  display: none;
+}
+
 /* Forms
 --------------------------------------------- */
 button,

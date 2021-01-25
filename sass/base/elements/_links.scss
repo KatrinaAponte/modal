@@ -1,0 +1,71 @@
+.site-main a, 
+.widget-area a,
+.site-footer a {
+	text-decoration: none;
+	color: $color__link;
+	position: relative;
+	padding-bottom: 0.2em;
+
+	&:after {
+	@include link-hover-style;
+	}
+
+	&:visited {
+		color: $color__link-visited;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+
+		&:after {
+			@include link-hover-style-animation;
+		}
+	}
+
+	&:focus {
+		outline: thin dotted;
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
+.site-main h1 a,
+.site-main h2 a,
+.site-main h3 a,
+.site-main h4 a,
+.site-main h5 a,
+.site-main h6 a {
+	color: $color__text-headings;
+
+	&:visited {
+		color: $color__text-headings;
+	}
+
+	&:after{
+		display: none;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__text-headings-link;
+
+		&:after {
+			display: none;
+		}
+	}
+}
+
+.custom-logo-link:after,
+.post-thumbnail:after {
+	display: none;
+}
+
+#wpadminbar a:after {
+	display: none;
+}
