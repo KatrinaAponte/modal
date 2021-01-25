@@ -1,0 +1,29 @@
+/* Grid layout with widget sidebar being displayed on the right. */
+
+.site {
+    display: grid;
+    -ms-grid-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 
+        "header header header"
+        ". main sidebar"
+        "footer footer footer";
+    grid-gap: 1.5rem;
+
+    .site-header {
+        grid-area: header;
+    }
+
+    .site-main {
+        grid-area: main;
+        overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+    }
+
+    .widget-area {
+        grid-area: sidebar;
+    }
+
+    .site-footer {
+        grid-area: footer;
+    }
+}
