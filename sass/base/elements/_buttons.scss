@@ -1,0 +1,22 @@
+button,
+.button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+    border: 2px inset;
+    border-color: $color__border-button;
+    border-radius: 1% 25% 1% 25% / 10% 50% 10% 50%;
+    background: $color__background-button;
+    color: $color__text-input;
+    line-height: $font__line-height-nav;
+
+    &:hover {
+        border: 2px outset;
+         border-color: $color__border-button-hover;
+    }
+
+    &:active,
+    &:focus {
+        border-color: $color__border-button-focus;
+    }
+}

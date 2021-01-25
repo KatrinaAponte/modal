@@ -420,10 +420,48 @@ html {
 --------------------------------------------- */
 /* Elements
 --------------------------------------------- */
+body {
+  background: #fff;
+}
+
 /* Links
 --------------------------------------------- */
 /* Forms
 --------------------------------------------- */
+button,
+.button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+  border: 2px inset;
+  border-color: #a6534f;
+  border-radius: 1% 25% 1% 25% / 10% 50% 10% 50%;
+  background: #a6534f;
+  color: #000;
+  line-height: 1;
+}
+
+button:hover,
+.button:hover,
+input[type='button']:hover,
+input[type='reset']:hover,
+input[type='submit']:hover {
+  border: 2px outset;
+  border-color: #a6534f #a56868 #a56868;
+}
+
+button:active, button:focus,
+.button:active,
+.button:focus,
+input[type='button']:active,
+input[type='button']:focus,
+input[type='reset']:active,
+input[type='reset']:focus,
+input[type='submit']:active,
+input[type='submit']:focus {
+  border-color: #a6534f #a56868 #a56868;
+}
+
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
