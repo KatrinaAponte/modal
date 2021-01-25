@@ -462,6 +462,59 @@ input[type='submit']:focus {
   border-color: #a6534f #a56868 #a56868;
 }
 
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  color: #000;
+  border: 1px outset #ccc;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  color: #111;
+  border: 1px inset;
+  -webkit-box-shadow: inset 4px 3px 5px rgba(73, 116, 58, 0.2);
+          box-shadow: inset 4px 3px 5px rgba(73, 116, 58, 0.2);
+  background: transparent;
+}
+
+select {
+  border: 1px inset #ccc;
+}
+
+textarea {
+  width: 100%;
+}
+
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/

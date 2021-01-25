@@ -9,30 +9,30 @@
  * Background color variables
  */
 
-  $color__background-body: #fff;
-  $color__background-screen: #efeef4;
-  $color__background-overlay: #49743a;
-  $color__background-hr: #49743a;
-  $color__background-button: #a6534f;
-  $color__background-pre: #eee;
-  $color__background-ins: #fff9c0;
+$color__background-body: #fff;
+$color__background-screen: #efeef4;
+$color__background-overlay: #49743a;
+$color__background-hr: #49743a;
+$color__background-button: #a6534f;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
 
 /*
  * Text color variables
  */
 
-  $color__text-screen: #000;
-  $color__text-input: #000;
-  $color__text-input-focus: #111;
-  $color__link: #a6534f;
-  $color__link-visited: #a56868; //Lowered saturation of Matrix Red
-  $color__link-hover: #a6534f;   //Higher saturation of Matrix Red
-  $color__text-headings: #49743a;
-  $color__text-headings-link: #61964d; //Raised brightness of Fern Green
-  $color__text-main: #000;
-  $color__text-nav-link: #efeef4;
-  $color__text-nav-link-hover: #f3ebda;
-  $color__text-shadow: rgba( 0, 0, 0, 0.6 );
+$color__text-screen: #000;
+$color__text-input: #000;
+$color__text-input-focus: #111;
+$color__link: #a6534f;
+$color__link-visited: #a56868; //Lowered saturation of Matrix Red
+$color__link-hover: #a6534f;   //Higher saturation of Matrix Red
+$color__text-headings: #49743a;
+$color__text-headings-link: #61964d; //Raised brightness of Fern Green
+$color__text-main: #000;
+$color__text-nav-link: #efeef4;
+$color__text-nav-link-hover: #f3ebda;
+$color__text-shadow: rgba( 0, 0, 0, 0.6 );
 
 /*
  * Border color variables
