@@ -435,6 +435,33 @@ hr {
   margin-bottom: 1.5rem;
 }
 
+ul,
+ol {
+  margin-bottom: 1.5em;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 1.5em;
+  margin-left: 1.5em;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin: 0 1.5em 1.5em;
+}
+
 /* Links
 --------------------------------------------- */
 .site-main a,
