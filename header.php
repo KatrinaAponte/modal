@@ -25,6 +25,35 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'modal' ); ?></a>
 
+	<div id="topbar" class="topbar is-flex">
+		<?php
+		the_custom_logo();
+		?>
+
+		<nav id="social" class="social is-flex">
+			<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'social',
+						'menu_id'		 => 'social',
+					)
+				); 
+			?>
+
+		<nav id="site-navigation" class="main-navigation is-flex">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'modal' ); ?></button>
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'top-nav',
+					'menu_id'        => 'Top Nav',
+				)
+			);
+			?>
+		</nav><!-- #site-navigation -->
+
+	</div>
+
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
@@ -44,16 +73,4 @@
 				<p class="site-description"><?php echo $modal_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'modal' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
