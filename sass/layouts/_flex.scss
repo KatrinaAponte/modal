@@ -1,0 +1,13 @@
+.is-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 0px;
+}
+
+//Changes from grid to flex layout on small screens
+@media screen and (max-width: 780px) {
+    .site {
+        display: flex;
+        flex-flow: column wrap;
+    }
+}
