@@ -8,6 +8,27 @@ nav ul {
     margin: 0 auto;
     padding: 0;
     line-height: $font__line-height-nav;
+
+    ul {
+        list-style: none;
+    }
+
+    li {
+        position: relative;
+        padding: 0 0 0.5rem;
+    }
+
+    a {
+        font: $font__black $font__size__m $font__headings;
+        color: $color__text-nav-link;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 0.5rem;
+
+        &:after {
+            background-color: $color__text-nav-link;
+        }
+    }
 }
 
 /* Main Navigation
