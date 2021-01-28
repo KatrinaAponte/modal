@@ -5,6 +5,9 @@ nav ul {
     flex: 1 1 0px;
     width: 100%;
     list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    line-height: $font__line-height-nav;
 }
 
 /* Main Navigation
