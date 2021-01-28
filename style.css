@@ -789,6 +789,27 @@ nav ul {
   line-height: 1;
 }
 
+nav ul ul {
+  list-style: none;
+}
+
+nav ul li {
+  position: relative;
+  padding: 0 0 0.5rem;
+}
+
+nav ul a {
+  font: 700 1rem Sarabun, Helvetica, sans-serif;
+  color: #efeef4;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+nav ul a:after {
+  background-color: #efeef4;
+}
+
 /* Main Navigation
 --------------------------------------------- */
 /* Social Navigation
