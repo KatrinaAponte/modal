@@ -31,6 +31,16 @@ nav ul {
     }
 }
 
+// Topbar positioning and background color.
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $color__accent-main;
+    box-shadow: $color__accent-shadow;
+}
+
 /* Main Navigation
 --------------------------------------------- */
 @import "main";
