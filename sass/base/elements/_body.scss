@@ -1,3 +1,4 @@
 body {
+    position: relative; // Allows topbar navigation to be sticky.
     background: $color__background-body; // Fallback for when there is no custom background color defined.
 }
