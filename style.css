@@ -424,6 +424,7 @@ html {
 /* Elements
 --------------------------------------------- */
 body {
+  position: relative;
   background: #fff;
 }
 
@@ -810,12 +811,40 @@ nav ul a:after {
   background-color: #efeef4;
 }
 
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #49743a;
+  -webkit-box-shadow: rgba(73, 116, 58, 0.2);
+          box-shadow: rgba(73, 116, 58, 0.2);
+}
+
 /* Main Navigation
 --------------------------------------------- */
+.main-navigation {
+  justify-self: flex-end;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 /* Social Navigation
 --------------------------------------------- */
 /* Quick Navigation
 --------------------------------------------- */
+.social {
+  justify-self: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
 /* Galleries
 --------------------------------------------- */
 /* Posts and pages
