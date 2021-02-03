@@ -3,3 +3,17 @@
     align-content: center;
     justify-content: flex-end;
 }
+
+// Mobile navigation settings.
+@media screen and(max-width: 780px) {
+    // Menu toggle
+    .menu-toggle {
+        display: none;
+    }
+
+    .main-navigation ul {
+        display: none;
+        flex-flow: column wrap;
+        width: 100%;
+    }
+}

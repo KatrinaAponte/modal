@@ -792,33 +792,88 @@ nav ul {
 
 nav ul ul {
   list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #61964d;
+  border-left: solid 2px #49743a;
+  width: 20ch;
+}
+
+nav ul ul li {
+  padding-left: 0.5em;
+  width: 100%;
+}
+
+nav ul ul li a {
+  width: 100%;
+}
+
+nav ul ul li ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  border-left: solid 2px #49743a;
+  width: 20ch;
+}
+
+nav ul ul li ul li {
+  padding-left: 0.5em;
+  width: 100%;
+}
+
+nav ul ul li ul li a {
+  width: 100%;
+}
+
+nav ul ul li ul li:focus > ul,
+nav ul ul li ul li:active > ul,
+nav ul ul li ul li:hover > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 nav ul li {
   position: relative;
-  padding: 0 0 0.5rem;
+  padding: 0.4em 0.5em;
 }
 
-nav ul a {
+nav ul li a {
+  position: relative;
   font: 700 1rem Sarabun, Helvetica, sans-serif;
   color: #efeef4;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 0.5rem;
+  width: 100%;
 }
 
-nav ul a:after {
-  background-color: #efeef4;
+nav ul li:focus > ul,
+nav ul li:active > ul,
+nav ul li:hover > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .topbar {
+  -ms-flex-line-pack: center;
+      align-content: center;
   position: fixed;
-  top: 0;
+  top: 45px;
   left: 0;
+  height: 2rem;
   width: 100%;
   background-color: #49743a;
   -webkit-box-shadow: rgba(73, 116, 58, 0.2);
           box-shadow: rgba(73, 116, 58, 0.2);
+  z-index: 400;
+}
+
+/* Menu toggle */
+.menu-toggle {
+  display: none;
 }
 
 /* Main Navigation
@@ -830,6 +885,20 @@ nav ul a:after {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+@media screen and (max-width: 780px) {
+  .menu-toggle {
+    display: none;
+  }
+  .main-navigation ul {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    width: 100%;
+  }
 }
 
 /* Social Navigation
