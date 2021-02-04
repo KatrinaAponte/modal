@@ -22,9 +22,9 @@
 }
 
 @mixin box-shadow {
-    -webkit-box-shadow: 5px 6px -6px $color__shadow;
-	-moz-box-shadow: 5px 6px -6px $color__shadow;
-	box-shadow: 5px 6px -6px $color__shadow;
+    -webkit-box-shadow: 5px 6px -6px $color__accent-shadow;
+	-moz-box-shadow: 5px 6px -6px $color__accent-shadow;
+	box-shadow: 5px 6px -6px $color__accent-shadow;
 }
 
 @mixin text-shadow {

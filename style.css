@@ -791,13 +791,17 @@ nav ul {
 }
 
 nav ul ul {
+  display: none;
   list-style: none;
   position: absolute;
   top: 100%;
   left: 0;
   background-color: #61964d;
-  border-left: solid 2px #49743a;
+  border-left: inset 2px #49743a;
+  border-bottom: inset 2px #49743a;
   width: 20ch;
+  -webkit-box-shadow: 5px 6px -6px rgba(73, 116, 58, 0.2);
+  box-shadow: 5px 6px -6px rgba(73, 116, 58, 0.2);
 }
 
 nav ul ul li {
@@ -814,7 +818,8 @@ nav ul ul li ul {
   position: absolute;
   top: 0;
   left: 100%;
-  border-left: solid 2px #49743a;
+  border-left: outset 0.1em #49743a;
+  border-bottom: outset 0.1em #49743a;
   width: 20ch;
 }
 
@@ -846,6 +851,7 @@ nav ul li a {
   color: #efeef4;
   text-transform: uppercase;
   text-decoration: none;
+  text-shadow: 1px 3px rgba(0, 0, 0, 0.6);
   width: 100%;
 }
 
