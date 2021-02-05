@@ -22,11 +22,32 @@
 }
 
 @mixin box-shadow {
-    -webkit-box-shadow: 5px 6px -6px $color__accent-shadow;
-	-moz-box-shadow: 5px 6px -6px $color__accent-shadow;
-	box-shadow: 5px 6px -6px $color__accent-shadow;
+    -webkit-box-shadow: 5px 3px 8px $color__accent-shadow;
+	-moz-box-shadow: 5px 3px 8px $color__accent-shadow;
+	box-shadow: 5px 3px 8px $color__accent-shadow;
 }
 
 @mixin text-shadow {
     text-shadow: 1px 3px $color__text-shadow;
+}
+
+@mixin backdrop-blur {
+    -webkit-backdrop-filter: blur( 2rem );
+    backdrop-filter: blur( 2rem );
+}
+
+@mixin nav-background {
+    background: $color__accent-main;
+    background: -webkit-linear-gradient( to right bottom, $color__background-nav1, $color__background-nav2 );
+    background: -moz-linear-gradient( to right bottom, $color__background-nav1, $color__background-nav2 );
+    background: linear-gradient( to right bottom, $color__background-nav1, $color__background-nav2 );
+}
+
+@mixin nav-background-dropdown {
+    background: $color__accent-main-hover;
+    background: -webkit-linear-gradient( to right bottom, $color__background-nav1, $color__background-nav2 );
+    background: -moz-linear-gradient( to right bottom, $color__background-nav1, $color__background-nav2 );
+    background: linear-gradient( to right bottom, $color__background-nav1, $color__background-nav2 );
+    border-left: solid 2px $color__border-nav-l;
+    border-bottom: solid 2px $color__border-nav-b;
 }

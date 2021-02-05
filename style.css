@@ -688,8 +688,8 @@ input[type="color"]:focus,
 textarea:focus {
   color: #111;
   border: 1px inset;
-  -webkit-box-shadow: inset 4px 3px 5px rgba(73, 116, 58, 0.2);
-          box-shadow: inset 4px 3px 5px rgba(73, 116, 58, 0.2);
+  -webkit-box-shadow: inset 4px 3px 5px rgba(73, 116, 58, 0.4);
+          box-shadow: inset 4px 3px 5px rgba(73, 116, 58, 0.4);
   background: transparent;
 }
 
@@ -796,12 +796,15 @@ nav ul ul {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #61964d;
-  border-left: inset 2px #49743a;
-  border-bottom: inset 2px #49743a;
+  z-index: 399;
+  background: #61964d;
+  background: -webkit-gradient(linear, left top, right bottom, from(#b1c9a8), to(#f5f8f4));
+  background: linear-gradient(to right bottom, #b1c9a8, #f5f8f4);
+  border-left: solid 2px rgba(73, 116, 58, 0.5);
+  border-bottom: solid 2px rgba(97, 150, 77, 0.1);
   width: 20ch;
-  -webkit-box-shadow: 5px 6px -6px rgba(73, 116, 58, 0.2);
-  box-shadow: 5px 6px -6px rgba(73, 116, 58, 0.2);
+  -webkit-box-shadow: 5px 3px 8px rgba(73, 116, 58, 0.4);
+  box-shadow: 5px 3px 8px rgba(73, 116, 58, 0.4);
 }
 
 nav ul ul li {
@@ -818,9 +821,13 @@ nav ul ul li ul {
   position: absolute;
   top: 0;
   left: 100%;
-  border-left: outset 0.1em #49743a;
-  border-bottom: outset 0.1em #49743a;
+  background: #61964d;
+  background: -webkit-gradient(linear, left top, right bottom, from(#b1c9a8), to(#f5f8f4));
+  background: linear-gradient(to right bottom, #b1c9a8, #f5f8f4);
+  border-left: solid 2px rgba(73, 116, 58, 0.5);
+  border-bottom: solid 2px rgba(97, 150, 77, 0.1);
   width: 20ch;
+  z-index: 399;
 }
 
 nav ul ul li ul li {
@@ -848,10 +855,9 @@ nav ul li {
 nav ul li a {
   position: relative;
   font: 700 1rem Sarabun, Helvetica, sans-serif;
-  color: #efeef4;
+  color: #213519;
   text-transform: uppercase;
   text-decoration: none;
-  text-shadow: 1px 3px rgba(0, 0, 0, 0.6);
   width: 100%;
 }
 
@@ -867,13 +873,14 @@ nav ul li:hover > ul {
   -ms-flex-line-pack: center;
       align-content: center;
   position: fixed;
-  top: 45px;
-  left: 0;
   height: 2rem;
   width: 100%;
-  background-color: #49743a;
-  -webkit-box-shadow: rgba(73, 116, 58, 0.2);
-          box-shadow: rgba(73, 116, 58, 0.2);
+  outline: 2px solid rgba(97, 150, 77, 0.1);
+  background: #49743a;
+  background: -webkit-gradient(linear, left top, right bottom, from(#b1c9a8), to(#f5f8f4));
+  background: linear-gradient(to right bottom, #b1c9a8, #f5f8f4);
+  -webkit-box-shadow: 5px 3px 8px rgba(73, 116, 58, 0.4);
+  box-shadow: 5px 3px 8px rgba(73, 116, 58, 0.4);
   z-index: 400;
 }
 

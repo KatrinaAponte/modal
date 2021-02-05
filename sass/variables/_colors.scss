@@ -16,6 +16,8 @@ $color__background-hr: #49743a;
 $color__background-button: #a6534f;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
+$color__background-nav1: rgb(177, 201, 168);
+$color__background-nav2: rgb(245, 248, 244);
 
 /*
  * Text color variables
@@ -30,8 +32,9 @@ $color__link-hover: #a6534f;   //Higher saturation of Matrix Red
 $color__text-headings: #49743a;
 $color__text-headings-link: #61964d; //Raised brightness of Fern Green
 $color__text-main: #000;
-$color__text-nav-link: #efeef4;
+// $color__text-nav-link: #efeef4;
 $color__text-nav-link-hover: #f3ebda;
+$color__text-nav-link: #213519;
 $color__text-shadow: rgba( 0, 0, 0, 0.6 );
 
 /*
@@ -43,6 +46,8 @@ $color__border-button-hover: #a6534f #a56868 #a56868;
 $color__border-button-focus: #a6534f #a56868 #a56868;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
+$color__border-nav-l: rgba( 73, 116, 58, 0.5 );
+$color__border-nav-b: rgba( 97, 150, 77, 0.1 );
 
 /*
  * Accent color variables
@@ -51,4 +56,4 @@ $color__border-abbr: #666;
 $color__accent-main: #49743a;
 $color__accent-secondary: #a6534f;
 $color__accent-main-hover: #61964d;
-$color__accent-shadow: rgba( 73, 116, 58, 0.2 );
+$color__accent-shadow: rgba( 73, 116, 58, 0.4 );

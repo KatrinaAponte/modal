@@ -15,9 +15,8 @@ nav ul {
         position: absolute;
         top: 100%;
         left: 0;
-        background-color: $color__accent-main-hover;
-        border-left: inset 2px $color__accent-main;
-        border-bottom: inset 2px $color__accent-main;
+        z-index: 399;
+        @include nav-background-dropdown;
         width: 20ch;
         @include box-shadow;
 
@@ -34,9 +33,9 @@ nav ul {
                 position: absolute;
                 top: 0;
                 left: 100%;
-                border-left: outset 0.1em $color__accent-main;
-                border-bottom: outset 0.1em $color__accent-main;
+                @include nav-background-dropdown;
                 width: 20ch;
+                z-index: 399;
 
                 li {
                     padding-left: 0.5em;
@@ -66,7 +65,6 @@ nav ul {
             color: $color__text-nav-link;
             text-transform: uppercase;
             text-decoration: none;
-            @include text-shadow;
             width: 100%;
         }
 
@@ -82,12 +80,11 @@ nav ul {
 .topbar {
     align-content: center;
     position: fixed;
-    top: 45px;
-    left: 0;
     height: 2rem;
     width: 100%;
-    background-color: $color__accent-main;
-    box-shadow: $color__accent-shadow;
+    outline: 2px solid $color__border-nav-b;
+    @include nav-background;
+    @include box-shadow;
     z-index: 400;
 }
 
