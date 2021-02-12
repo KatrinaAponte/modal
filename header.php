@@ -46,7 +46,7 @@
 			wp_nav_menu(
 				array(
 					'theme_location' => 'top-nav',
-					'menu_id'        => 'Top Nav',
+					'menu_id'        => 'top-nav',
 				)
 			);
 			?>
