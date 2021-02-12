@@ -15,7 +15,7 @@ nav ul {
         position: absolute;
         top: 100%;
         left: 0;
-        z-index: 399;
+        z-index: 1000;
         @include nav-background-dropdown;
         width: 20ch;
         @include box-shadow;
@@ -32,10 +32,10 @@ nav ul {
                 display: none;
                 position: absolute;
                 top: 0;
-                left: 100%;
+                left: -20ch;
                 @include nav-background-dropdown;
                 width: 20ch;
-                z-index: 399;
+                z-index: 1000;
 
                 li {
                     padding-left: 0.5em;
@@ -85,7 +85,7 @@ nav ul {
     outline: 2px solid $color__border-nav-b;
     @include nav-background;
     @include box-shadow;
-    z-index: 400;
+    z-index: 1000;
 }
 
 /* Menu toggle */

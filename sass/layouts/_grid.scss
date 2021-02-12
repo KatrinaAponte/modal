@@ -5,10 +5,15 @@
     -ms-grid-columns: 1fr 3fr 1fr;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas: 
+        "topbar topbar topbar"
         "header header header"
         ". main sidebar"
         "footer footer footer";
     grid-gap: 1.5rem;
+
+    .topbar {
+        grid-area: topbar;
+    }
 
     .site-header {
         grid-area: header;

@@ -733,19 +733,26 @@ textarea {
   display: grid;
   -ms-grid-columns: 1fr 3fr 1fr;
   grid-template-columns: 1fr 3fr 1fr;
-      grid-template-areas: "header header header" ". main sidebar" "footer footer footer";
+      grid-template-areas: "topbar topbar topbar" "header header header" ". main sidebar" "footer footer footer";
   grid-gap: 1.5rem;
 }
 
-.site .site-header {
+.site .topbar {
   -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: topbar;
+}
+
+.site .site-header {
+  -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: header;
 }
 
 .site .site-main {
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: main;
   overflow: hidden;
@@ -753,13 +760,13 @@ textarea {
 }
 
 .site .widget-area {
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 3;
   grid-area: sidebar;
 }
 
 .site .site-footer {
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: footer;
@@ -796,7 +803,7 @@ nav ul ul {
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 399;
+  z-index: 1000;
   background: #61964d;
   background: -webkit-gradient(linear, left top, right bottom, from(#b1c9a8), to(#f5f8f4));
   background: linear-gradient(to right bottom, #b1c9a8, #f5f8f4);
@@ -820,14 +827,14 @@ nav ul ul li ul {
   display: none;
   position: absolute;
   top: 0;
-  left: 100%;
+  left: -20ch;
   background: #61964d;
   background: -webkit-gradient(linear, left top, right bottom, from(#b1c9a8), to(#f5f8f4));
   background: linear-gradient(to right bottom, #b1c9a8, #f5f8f4);
   border-left: solid 2px rgba(73, 116, 58, 0.5);
   border-bottom: solid 2px rgba(97, 150, 77, 0.1);
   width: 20ch;
-  z-index: 399;
+  z-index: 1000;
 }
 
 nav ul ul li ul li {
@@ -881,7 +888,7 @@ nav ul li:hover > ul {
   background: linear-gradient(to right bottom, #b1c9a8, #f5f8f4);
   -webkit-box-shadow: 5px 3px 8px rgba(73, 116, 58, 0.4);
   box-shadow: 5px 3px 8px rgba(73, 116, 58, 0.4);
-  z-index: 400;
+  z-index: 1000;
 }
 
 /* Menu toggle */
