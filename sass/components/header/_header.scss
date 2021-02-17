@@ -1,24 +1,48 @@
 .site-header {
-    flex-flow: row;
+    flex-flow: row-reverse;
+    align-content: center;
     flex: 1 1 0px;
     width: 100%;
+    min-height: 15rem;
     gap: 1em;
 
     .site-branding {
+        position: relative;
         justify-self: flex-end;
+        align-self: center;
         display: flex;
         flex-flow: column;
-        width: 100%;
+        width: 40%;
+        padding-left: 2em;
+
+        &:before {
+            position: absolute;
+            display: block;
+            top: 25%;
+            left: 0;
+            content: '';
+            height: 75%;
+            width: 0.1em;
+            background-color: $color__text-screen;
+        }
 
         .site-title a {
             text-decoration: none;
             color: $color__text-screen;
             font: $font__black $font__size__header $font__headings;
+            line-height: $font__line-height-nav;
 
             &:active,
             &:visited {
                 color: $color__text-screen;
             }
+        }
+
+        p {
+            color: $color__text-screen;
+            opacity: 0.5;
+            font: $font__bold $font__size__subhead $font__headings;
+            margin: 0;
         }
     }
 }

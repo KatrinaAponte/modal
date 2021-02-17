@@ -779,18 +779,24 @@ textarea {
 --------------------------------------------- */
 .site-header {
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse;
+          flex-flow: row-reverse;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0px;
   width: 100%;
+  min-height: 15rem;
   gap: 1em;
 }
 
 .site-header .site-branding {
+  position: relative;
   justify-self: flex-end;
+  -ms-flex-item-align: center;
+      align-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -798,17 +804,37 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  width: 100%;
+  width: 40%;
+  padding-left: 2em;
+}
+
+.site-header .site-branding:before {
+  position: absolute;
+  display: block;
+  top: 25%;
+  left: 0;
+  content: '';
+  height: 75%;
+  width: 0.1em;
+  background-color: #000;
 }
 
 .site-header .site-branding .site-title a {
   text-decoration: none;
   color: #000;
   font: 700 calc( 1.5rem + 5vmin) Sarabun, Helvetica, sans-serif;
+  line-height: 1;
 }
 
 .site-header .site-branding .site-title a:active, .site-header .site-branding .site-title a:visited {
   color: #000;
+}
+
+.site-header .site-branding p {
+  color: #000;
+  opacity: 0.5;
+  font: 500 calc( 1rem + 1vmin) Sarabun, Helvetica, sans-serif;
+  margin: 0;
 }
 
 /* Navigation
