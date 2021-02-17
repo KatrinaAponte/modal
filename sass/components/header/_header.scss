@@ -9,6 +9,17 @@
         display: flex;
         flex-flow: column;
         width: 100%;
+
+        .site-title a {
+            text-decoration: none;
+            color: $color__text-screen;
+            font: $font__black $font__size__header $font__headings;
+
+            &:active,
+            &:visited {
+                color: $color__text-screen;
+            }
+        }
     }
 }
 

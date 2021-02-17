@@ -801,6 +801,16 @@ textarea {
   width: 100%;
 }
 
+.site-header .site-branding .site-title a {
+  text-decoration: none;
+  color: #000;
+  font: 700 calc( 1.5rem + 5vmin) Sarabun, Helvetica, sans-serif;
+}
+
+.site-header .site-branding .site-title a:active, .site-header .site-branding .site-title a:visited {
+  color: #000;
+}
+
 /* Navigation
 --------------------------------------------- */
 nav ul {
