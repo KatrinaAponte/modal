@@ -54,7 +54,7 @@
 
 	</div>
 
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="site-header is-flex">
 		<div class="site-branding">
 			<?php
 			if ( is_front_page() && is_home() ) :

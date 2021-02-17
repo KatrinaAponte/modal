@@ -1,2 +1,16 @@
+.site-header {
+    flex-flow: row;
+    flex: 1 1 0px;
+    width: 100%;
+    gap: 1em;
+
+    .site-branding {
+        justify-self: flex-end;
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+    }
+}
+
 @import "hero-image";
 @import "custom-logo";
