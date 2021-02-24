@@ -36,6 +36,8 @@
 					)
 				);
 				?>
+			</nav>
+		<?php endif; ?>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
