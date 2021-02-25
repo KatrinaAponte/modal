@@ -5,11 +5,17 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package Modal
+ * @since Modal 1.0
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
+}
+
+// This theme requires Wordpress 5.3 or later.
+if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
+	require get_template_directory() . '/inc/back-compat.php';
 }
 
 if ( ! function_exists( 'modal_setup' ) ) :
