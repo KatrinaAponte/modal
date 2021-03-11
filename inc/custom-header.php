@@ -24,8 +24,8 @@ function modal_custom_header_setup() {
 			array(
 				'default-image'      => '',
 				'default-text-color' => '000000',
-				'width'              => 1000,
-				'height'             => 250,
+				'width'              => 800,
+				'height'             => 800,
 				'flex-height'        => true,
 				'wp-head-callback'   => 'modal_header_style',
 			)
