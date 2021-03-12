@@ -103,8 +103,8 @@ if ( ! function_exists( 'modal_setup' ) ) :
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'      => 250,
-				'width'       => 250,
+				'height'      => 112,
+				'width'       => 112,
 				'flex-width'  => true,
 				'flex-height' => true,
 			)
@@ -121,7 +121,7 @@ add_action( 'after_setup_theme', 'modal_setup' );
  * @global int $content_width
  */
 function modal_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'modal_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'modal_content_width', 1920 );
 }
 add_action( 'after_setup_theme', 'modal_content_width', 0 );
 
