@@ -7,6 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package Modal
+ * @since Modal 1.0
  */
 
 ?>
@@ -55,6 +56,14 @@
 	</div>
 
 	<header id="masthead" class="site-header is-flex">
+		<?php
+		if ( get_header_image() ) : ?>
+			<div id="site-header" class="hero-image">
+				<img src="<?php header_image(); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+			</div>
+
+		<?php endif; ?> <!-- end header image -->
+		
 		<div class="site-branding">
 			<?php
 			if ( is_front_page() && is_home() ) :
