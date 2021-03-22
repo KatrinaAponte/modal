@@ -55,7 +55,9 @@
 
 	</div>
 
-	<header id="masthead" class="site-header is-flex">
+	<header id="masthead" class="site-header">
+
+	<!-- Try adding image as backround-image as inline CSS. Might solve issues with SVG cutouts. Test in v2. -->
 		<?php
 		if ( get_header_image() ) : ?>
 			<div id="site-header" class="hero-image">

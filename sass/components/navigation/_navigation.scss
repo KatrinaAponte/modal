@@ -76,11 +76,12 @@ nav ul {
     }
 }
 
-// Topbar positioning and background color.
+// Topbar styling
 .topbar {
     align-content: center;
     position: fixed;
     height: 2rem;
+    line-height: $font__line-height-nav;
     width: 100%;
     outline: 2px solid $color__border-nav-b;
     @include nav-background;
