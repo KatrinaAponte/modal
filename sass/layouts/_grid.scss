@@ -3,14 +3,14 @@
 @media (min-width: 781px) {
     .site {
         display: grid;
-        -ms-grid-columns: 2.5em 3fr 1fr;
         grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 2em auto;
         grid-template-areas: 
             "topbar topbar topbar"
             "header header header"
             ". main sidebar"
             "footer footer footer";
-        grid-gap: 2.5rem;
+        gap: $gap;
     
         .topbar {
             grid-area: topbar;
@@ -42,5 +42,6 @@
        display: grid;
        grid-template-columns: auto 1fr;
        grid-template-rows: auto;
+       gap: $gap-mobile;
    }
 }

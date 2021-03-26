@@ -1,0 +1,28 @@
+.site-main {
+    font: $font__regular $font__size__m $font__main;
+    line-height: $font__line-height-body;
+
+    * {
+        p {
+            max-width: 60ch;
+            margin: 0px;
+        }
+    }
+}
+
+// Settings for mobile screens
+@media (max-width: 780px) {
+    .site-main {        
+        padding: $mobile-padding;
+
+        * {
+            display: flex;
+            flex-flow: column wrap;
+            gap: $gap-mobile;
+
+            p {
+                max-width: 75ch;
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.widget-area {
+    flex-flow: column wrap;
+    font: $font__regular $font__size__m $font__main;
+    line-height: $font__line-height-body;
+    text-transform: capitalize;
+    gap: $gap;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        margin: 0px;
+        font: $font__bold $font__size__xl $font__headings;
+        padding-bottom: 0.25em;
+    
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .widget_search {
+        max-width: 90%;
+
+        .search-form {            
+            flex-flow: row wrap;
+            gap: $gap;
+        }
+    }
+
+    section {
+        max-width: 90%;
+        display: flex;
+        flex-flow: column wrap;
+
+        ul, ol {
+            margin: 0;
+        }
+    }
+}
+
+// Settings for mobile screens
+@media (max-width: 780px) {
+    .widget-area {        
+        padding: $mobile-padding;
+        gap: $gap-mobile;
+
+        .search-form {
+            gap: $gap-mobile;
+        }
+    }
+}

@@ -79,6 +79,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*
  * Font size defaults
  */
+/*
+ * Grid and Flexbox gap
+ */
+/*
+ * Content padding for mobile devices
+ */
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -421,11 +427,56 @@ html {
 --------------------------------------------------------------*/
 /* Typography
 --------------------------------------------- */
+.site-main h1,
+.site-main h2,
+.site-main h3,
+.site-main h4,
+.site-main h5 {
+  margin: 0px;
+  font: 500 2rem Sarabun, Helvetica, sans-serif;
+}
+
+.site-main {
+  font: 400 1rem Prompt, sans-serif;
+  line-height: 1.5;
+}
+
+.site-main * p {
+  max-width: 60ch;
+  margin: 0px;
+}
+
+@media (max-width: 780px) {
+  .site-main {
+    padding: 0 1.5rem;
+  }
+  .site-main * {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    gap: 1rem 1rem;
+  }
+  .site-main * p {
+    max-width: 75ch;
+  }
+}
+
 /* Elements
 --------------------------------------------- */
 body {
   position: relative;
   background: #fff;
+  font-size: 18px;
+}
+
+@media (max-width: 780px) {
+  body {
+    font-size: 16px;
+  }
 }
 
 hr {
@@ -724,6 +775,7 @@ textarea {
     -webkit-box-direction: normal;
         -ms-flex-flow: column wrap;
             flex-flow: column wrap;
+    gap: 1rem 1rem;
   }
 }
 
@@ -740,7 +792,7 @@ textarea {
     -ms-flex-line-pack: center;
         align-content: center;
     flex: 1 1 0px;
-    gap: 1em;
+    gap: 1.5rem 1.5rem;
   }
 }
 
@@ -749,10 +801,12 @@ textarea {
   .site {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 2.5em 3fr 1fr;
-    grid-template-columns: 1fr 3fr 1fr;
+    -ms-grid-columns: 1fr 3fr 1fr;
+        grid-template-columns: 1fr 3fr 1fr;
+    -ms-grid-rows: 2em auto;
+        grid-template-rows: 2em auto;
         grid-template-areas: "topbar topbar topbar" "header header header" ". main sidebar" "footer footer footer";
-    grid-gap: 2.5rem;
+    gap: 1.5rem 1.5rem;
   }
   .site .topbar {
     -ms-grid-row: 1;
@@ -794,6 +848,7 @@ textarea {
         grid-template-columns: auto 1fr;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
+    gap: 1rem 1rem;
   }
 }
 
@@ -855,17 +910,17 @@ textarea {
   .site-header {
     width: 100%;
     position: relative;
-    margin-top: 2em;
   }
   .site-header .site-branding {
     -ms-grid-column: 1;
-    grid-column: 1/1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     grid-row: 1/3;
     text-align: center;
     width: 100%;
-    padding-left: 0;
+    padding: 0;
     margin: auto;
     color: #000;
     z-index: 10;
@@ -900,7 +955,8 @@ textarea {
 @media (max-width: 780px) {
   .hero-image {
     -ms-grid-column: 1;
-    grid-column: 1/1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     grid-row: 1/3;
@@ -909,6 +965,7 @@ textarea {
     opacity: .5;
   }
   .hero-image img {
+    margin: auto;
     width: 100%;
   }
 }
@@ -1085,6 +1142,13 @@ nav ul li:hover > ul {
 --------------------------------------------- */
 /* Posts and pages
 --------------------------------------------- */
+.site-content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
 /* Galleries
 --------------------------------------------- */
 /* Media
@@ -1095,6 +1159,68 @@ nav ul li:hover > ul {
 --------------------------------------------- */
 /* Widgets
 --------------------------------------------- */
+.widget-area {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  font: 400 1rem Prompt, sans-serif;
+  line-height: 1.5;
+  text-transform: capitalize;
+  gap: 1.5rem 1.5rem;
+}
+
+.widget-area h1,
+.widget-area h2,
+.widget-area h3,
+.widget-area h4,
+.widget-area h5 {
+  margin: 0px;
+  font: 500 2rem Sarabun, Helvetica, sans-serif;
+  padding-bottom: 0.25em;
+}
+
+.widget-area ul {
+  list-style-type: none;
+}
+
+.widget-area .widget_search {
+  max-width: 90%;
+}
+
+.widget-area .widget_search .search-form {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  gap: 1.5rem 1.5rem;
+}
+
+.widget-area section {
+  max-width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.widget-area section ul, .widget-area section ol {
+  margin: 0;
+}
+
+@media (max-width: 780px) {
+  .widget-area {
+    padding: 0 1.5rem;
+    gap: 1rem 1rem;
+  }
+  .widget-area .search-form {
+    gap: 1rem 1rem;
+  }
+}
+
 /* Footer
 --------------------------------------------- */
 /*--------------------------------------------------------------
