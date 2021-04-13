@@ -1,7 +1,8 @@
 .is-flex {
     display: flex;
     flex-wrap: wrap;
-    flex: 1 1 0px;
+    flex: 1 1 0;
+    gap: $gap;
 }
 
 // Changes .site from grid to flex layout on small screens
@@ -18,11 +19,56 @@
 @media (min-width: 781px) {    
     .site-header {
         display: flex;
-        flex-wrap: wrap;
+        flex-flow: row;
         flex: 1 1 0px;
         align-content: center;
-        flex: 1 1 0px;
-        // min-height: 25vmax;
+        // justify-content: space-evenly;
         gap: $gap;
+    }
+
+    .site-main {
+        display: flex;
+        flex-flow: column wrap;
+        gap: $gap;
+        max-width: 100%;
+        overflow: hidden;
+
+        .entry-content {
+            display: flex;
+            flex-flow: column wrap;
+            gap: $gap;
+        }
+
+        & > * {
+            display: flex;
+            flex-flow: column wrap;
+            gap: $gap;
+        }
+    }
+}
+
+form {
+    display: flex;
+    flex-flow: column wrap;
+    gap: $gap;
+
+    p {
+        display: flex;
+        flex-flow: column wrap;
+        flex: 0 1 0;
+        max-width: 80%;
+
+        & > input {
+            flex: 0 1 auto;
+            width: fit-content;
+        }
+    }
+
+    .comment-notes {
+        flex-flow: row wrap;
+
+        #email-notes {
+            width: 100%;
+        }
     }
 }

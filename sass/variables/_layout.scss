@@ -8,3 +8,13 @@ $gap-mobile: 1rem 1rem;
  * Content padding for mobile devices
  */
 $mobile-padding: 0 1.5rem;
+
+/*
+ * Content margin for floats
+ */
+$margin__float-left: 0 1.5rem 1.5rem 0;
+$margin__float-right: 0 0 1.5rem 1.5rem;
+$margin__center: 0 auto;
+$margin__bottom-content: 1.5rem;
+
+@import 'columns';

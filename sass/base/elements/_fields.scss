@@ -31,6 +31,17 @@ select {
 	border: 1px inset $color__border-input;
 }
 
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"] {
+	min-width: 32ch;
+	max-width: 65ch;
+}
+
 textarea {
-	width: 100%;
+	width: 80%;
 }

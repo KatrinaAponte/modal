@@ -61,9 +61,15 @@
 	}
 }
 
-.custom-logo-link:after,
-.post-thumbnail:after {
-	display: none;
+.custom-logo-link:hover,
+.custom-logo-link:focus,
+.custom-logo-link:active,
+.post-thumbnail:hover,
+.post-thumbnail:focus,
+.post-thumbnail:active {
+	&:after {
+		display: none;
+	}
 }
 
 #wpadminbar a:after {

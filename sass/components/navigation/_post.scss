@@ -1,0 +1,49 @@
+.post-navigation {
+
+    .nav-links {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        .nav-previous {
+            display: flex;
+            gap: $gap;
+
+            a {
+                display: flex;
+                flex-flow: column;
+
+                .nav-subtitle {
+                    font-weight: $font__bold;
+                    color: $color__text-screen;
+                }
+            }
+
+            &:before {
+                content: '';
+                align-self: end;
+            }
+        }
+
+        .nav-next {
+            display: flex;
+            gap: $gap;
+            text-align: right;
+
+                a {
+                display: flex;
+                flex-flow: column;
+
+                .nav-subtitle {
+                    font-weight: $font__bold;
+                    color: $color__text-screen;
+                }
+            }
+
+            &:after {
+                content: '';
+                align-self: center;
+            }
+        }
+    }
+}

@@ -1,6 +1,6 @@
 ul,
 ol {
-	margin-bottom: 1.5em;
+	margin: 0 0 $margin__bottom-content;
 }
 
 ul {
@@ -13,8 +13,8 @@ ol {
 
 li > ul,
 li > ol {
-	margin-bottom: 1.5em;
-	margin-left: 1.5em;
+	padding-left: 4ch;
+	margin-bottom: 0;
 }
 
 dt {
@@ -22,5 +22,5 @@ dt {
 }
 
 dd {
-	margin: 0 1.5em 1.5em;
+	padding-left: 4ch;
 }

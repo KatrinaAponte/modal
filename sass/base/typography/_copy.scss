@@ -1,12 +1,22 @@
 .site-main {
     font: $font__regular $font__size__m $font__main;
     line-height: $font__line-height-body;
+    max-width: 100%;
 
     * {
         p {
-            max-width: 60ch;
             margin: 0px;
+            word-break: break-word;
         }
+    }
+
+    // cite,
+    blockquote {
+        font-style: italic;
+        border-left: 0.25em solid $color__background-hr;
+        border-radius: 10em 0 0 15em/ 7em 14em 29em 7em;
+        margin: 0 1.5em 1em;
+        padding: 0.5em 1em;
     }
 }
 
@@ -19,6 +29,7 @@
             display: flex;
             flex-flow: column wrap;
             gap: $gap-mobile;
+            justify-content: center;
 
             p {
                 max-width: 75ch;

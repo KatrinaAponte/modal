@@ -3,20 +3,22 @@ button,
 input[type='button'],
 input[type='reset'],
 input[type='submit'] {
-    border: 2px inset;
-    border-color: $color__border-button;
-    border-radius: 1% 25% 1% 25% / 10% 50% 10% 50%;
+    padding: .5em 1em;
+    border-style: none;
+    border-radius: 0 5em 0 5em / 5em 5em 0 5em;
     background: $color__background-button;
-    color: $color__text-input;
+    color: $color__background-body;
+    font-weight: $font__bold;
     line-height: $font__line-height-nav;
-
-    &:hover {
-        border: 2px outset;
-         border-color: $color__border-button-hover;
-    }
+    box-shadow: 0 0 0 0px $color__border-button;
+    transition: all 50ms ease-in-out;
 
     &:active,
-    &:focus {
-        border-color: $color__border-button-focus;
+    &:focus,
+    &:hover {
+        color: $color__text-input;
+        box-shadow: 2px 2px 0px 1px $color__background-body,
+                    3px 3px 0px 4px $color__border-button;
     }
+
 }
