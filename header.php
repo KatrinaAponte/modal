@@ -55,32 +55,37 @@
 
 	</div>
 
-	<header id="masthead" class="site-header">
+	<?php // Only displays main header on front page
+	if ( is_front_page() ) : ?>
 
-	<!-- Try adding image as backround-image as inline CSS. Might solve issues with SVG cutouts. Test in v2. -->
-		<?php
-		if ( get_header_image() ) : ?>
-			<div id="site-header" class="hero-image">
-				<img src="<?php header_image(); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-			</div>
+		<header id="masthead" class="site-header">
 
-		<?php endif; ?> <!-- end header image -->
-		
-		<div class="site-branding">
+		<!-- Try adding image as backround-image as inline CSS. Might solve issues with SVG cutouts. Test in v2. -->
 			<?php
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			if ( get_header_image() ) : ?>
+				<div id="site-header" class="hero-image">
+					<img src="<?php header_image(); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+				</div>
+
+			<?php endif; ?> <!-- end header image -->
+			
+			<div class="site-branding">
 				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$modal_description = get_bloginfo( 'description', 'display' );
-			if ( $modal_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $modal_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-	</header><!-- #masthead -->
+				if ( is_front_page() && is_home() ) :
+					?>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php
+				else :
+					?>
+					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+					<?php
+				endif;
+				$modal_description = get_bloginfo( 'description', 'display' );
+				if ( $modal_description || is_customize_preview() ) :
+					?>
+					<p class="site-description"><?php echo $modal_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+				<?php endif; ?>
+			</div><!-- .site-branding -->
+		</header><!-- #masthead -->
+
+	<?php endif; ?> <!-- Ends page check if -->
