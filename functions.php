@@ -175,6 +175,11 @@ add_action( 'wp_enqueue_scripts', 'modal_scripts' );
 require get_template_directory() . '/inc/custom-header.php';
 
 /**
+ * SVG Icons
+ */
+require get_template_directory() . '/classes/class-modal-svg-icons.php';
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
